@@ -9,3 +9,5 @@ composer.lock
 .DS_Store
 .php-cs-fixer.cache
 .psalm/
+CLAUDE.md
+.claude

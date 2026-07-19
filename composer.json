@@ -1,0 +1,48 @@
+{
+    "name": "papi-ai/effect",
+    "description": "Effect/fiber async bridge for PapiAI, built on phunkie/effect and phunkie/streams",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marcello Duarte",
+            "email": "marcello.duarte@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "papi-ai/papi-core": "^0.10",
+        "phunkie/effect": "^1.2",
+        "phunkie/streams": "^1.1"
+    },
+    "require-dev": {
+        "pestphp/pest": "^3.0",
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "vimeo/psalm": "^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "PapiAI\\Effect\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PapiAI\\Effect\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "pest",
+        "test:coverage": "XDEBUG_MODE=coverage pest --coverage --min=60",
+        "lint": "php-cs-fixer fix --dry-run --diff",
+        "lint:fix": "php-cs-fixer fix",
+        "analyse": "psalm",
+        "ci": ["@lint", "@analyse", "@test:coverage"]
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
