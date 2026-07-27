@@ -11,7 +11,7 @@
     ],
     "require": {
         "php": "^8.2",
-        "papi-ai/papi-core": "^0.10",
+        "papi-ai/papi-core": "^0.14",
         "phunkie/effect": "^1.2",
         "phunkie/streams": "^1.1"
     },
